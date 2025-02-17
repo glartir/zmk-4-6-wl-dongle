@@ -51,23 +51,23 @@
     trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";   
         device = <&vtrackball>;
-        layers = <2>;
+        layers = <1>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
-        scale-divisor = <12>;
+        scale-divisor = <6>;
     };
 
     trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <1>;
+        layers = <2>;
         evt-type = <INPUT_EV_REL>;            
         x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
         y-invert;
-        bindings = <&ib_wheel_scaler 1 16>;
+        bindings = <&ib_wheel_scaler 1 32>;
     };
 
     ib_wheel_scaler: ib_wheel_scaler {
@@ -148,9 +148,9 @@
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &trans        &kp EXCL       &kp AT      &kp HASH       &kp DLLR     &kp PRCNT         &kp C_VOLUME_UP  &kp HOME    &kp UP        &kp END       &kp RPAR      &kp DEL
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &trans      &bt BT_CLR    &mkp RCLK     &trans       &mkp MCLK        &to 3           &kp C_VOLUME_DOWN &kp LEFT     &kp DOWN      &kp RIGHT      &kp BSLH      &kp GRAVE
+                   &trans      &bt BT_CLR    &mkp RCLK     &trans       &mkp LCLK        &to 3           &kp C_VOLUME_DOWN &kp LEFT     &kp DOWN      &kp RIGHT      &kp BSLH      &kp GRAVE
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &trans     &out OUT_TOG   &bootloader     &trans         &trans       &trans           &kp C_MUTE       &kp RBKT     &kp LBRC      &kp RBRC      &kp PIPE      &kp TILDE
+                   &trans     &out OUT_TOG   &bootloader     &trans         &trans       &trans           &kp C_MUTE       &kp RBKT     &mkp MrCLK      &kp RBRC      &kp PIPE      &kp TILDE
             // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                                               &trans        &trans       &trans            &trans        &trans    
             //                                           ╰─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────╯
