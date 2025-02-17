@@ -62,13 +62,13 @@
     trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <1>; // Активен только на слое 1
+        layers = <>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
         y-invert;
         scale-multiplier = <1>;
-        scale-divisor = <32>; // Скорость прокрутки
+        scale-divisor = <32>;
     };
 
     ib_wheel_scaler: ib_wheel_scaler {
