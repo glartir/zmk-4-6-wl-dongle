@@ -131,9 +131,9 @@
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &trans       &kp LEFT       &kp DOWN     &kp RIGHT      &trans         &trans           &kp EQUAL      &kp N4         &kp N5        &kp N6      &kp BACKSLASH    &kp KP_DIVIDE
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                 &kp LEFT_ALT    &trans        &trans         &trans      &kp MINUS      &kp PLUS          &kp N1       &kp N2         &kp N3        &kp DOT       &trans        &kp F20
+                      &trans    &trans        &trans         &trans      &kp MINUS      &kp PLUS          &kp DOT      &kp N1         &kp N2        &kp N3       &trans        &kp ENTER
             // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                                              &trans       &trans        &trans            &trans        &trans    
+                                                              &trans       &trans        &trans            &kp N0        &trans
             //                                           ╰─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────╯
                                                                            &trans        &trans            &trans
             //                                                         ╰─────────────┴─────────────╯   ╰─────────────╯
@@ -145,13 +145,13 @@
             display-name = "Raise";
             bindings = <
             // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                   &trans        &trans         &trans       &trans         &trans       &trans          &bootloader    &sys_reset     &trans        &trans        &trans        &trans
+                   &kp F7        &kp F8         &kp F9       &kp F10         &kp F11       &kp F12          &bootloader    &sys_reset     &trans        &trans        &trans        &trans
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &trans        &kp EXCL       &kp AT      &kp HASH       &kp DLLR     &kp PRCNT         &kp CARET      &kp AMPS    &kp KP_MULTIPLY &kp LPAR      &kp RPAR      &kp DEL
+                   &trans        &kp EXCL       &kp AT      &kp HASH       &kp DLLR     &kp PRCNT         &kp C_VOLUME_UP  &kp HOME    &kp UP        &kp END       &kp RPAR      &kp DEL
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &trans      &bt BT_CLR    &bt BT_PRV    &bt BT_NXT       &trans        &to 3           &kp UNDER     &kp EQUAL     &kp LBKT      &kp RBKT      &kp BSLH      &kp GRAVE
+                   &trans      &bt BT_CLR    &mkp RCLK     &trans       &mkp MCLK        &to 3           &kp C_VOLUME_DOWN &kp LEFT     &kp DOWN      &kp RIGHT      &kp BSLH      &kp GRAVE
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &trans     &out OUT_TOG   &bootloader     &trans         &trans       &trans           &kp MINUS      &kp PLUS     &kp LBRC      &kp RBRC      &kp PIPE      &kp TILDE
+                   &trans     &out OUT_TOG   &bootloader     &trans         &trans       &trans           &kp C_MUTE       &kp RBKT     &kp LBRC      &kp RBRC      &kp PIPE      &kp TILDE
             // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                                               &trans        &trans       &trans            &trans        &trans    
             //                                           ╰─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────╯
