@@ -100,7 +100,7 @@
             bindings = <&trackball_scroll_mode>;
         };
         trackball_scroll_mode: trackball_scroll_mode {
-            compatible = "zmk,behavior-input-listener";
+            compatible = "zmk,input-behavior-listener";
             device = <&vtrackball>;
             evt-type = <INPUT_EV_REL>;
             x-input-code = <INPUT_REL_HWHEEL>;
