@@ -121,7 +121,6 @@
             >;
         };
     };
-interest-payment555
     keymap {
         compatible = "zmk,keymap";
 
