@@ -99,7 +99,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <
-                &kp LS(LEFT_SHIFT) &kp I
+                &kp LS(I)
                 &kp N
                 &kp T
                 &kp E
@@ -107,7 +107,7 @@
                 &kp E
                 &kp S
                 &kp T
-                &kp LS(LEFT_SHIFT) &kp MINUS
+                &kp LS(MINUS)
                 &kp P
                 &kp A
                 &kp Y
@@ -121,7 +121,7 @@
             >;
         };
     };
-
+interest-payment555
     keymap {
         compatible = "zmk,keymap";
 
