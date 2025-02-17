@@ -67,12 +67,6 @@
                 &macro_tap &kp N5>;
         };
 
-    keymap {
-        compatible = "zmk,keymap";
-        default_layer {
-            bindings = <
-                &interest_payment_macro
-
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
