@@ -94,6 +94,25 @@
                 <&mo>,
                 <&kp>;
         };
+
+         hello_world: hello_world_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &kp LS(LEFT_SHIFT) &kp H
+                &kp E
+                &kp L
+                &kp L
+                &kp O
+                &kp SPACE
+                &kp W
+                &kp O
+                &kp R
+                &kp L
+                &kp D
+                &kp LS(LEFT_SHIFT) &kp N1
+            >;
+        };
     };
 
     keymap {
@@ -124,7 +143,7 @@
             display-name = "Lower";
             bindings = <
             // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                   &trans         &trans       &kp LPAR       &kp RPAR      &sys_reset   &bootloader         &trans     &kp PSCRN    &kp LPAR       &kp RPAR      &kp CAPS        &trans
+                   &trans         &trans       &kp LPAR       &kp RPAR      &sys_reset   &bootloader         &trans     &kp PSCRN    &kp LPAR       &kp RPAR      &kp CAPS        &hello_world
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &trans         &trans       &kp UP         &trans       &trans       &kp GRAVE          &kp MINUS       &kp N7         &kp N8        &kp N9     &kp PLUS      &kp KP_MULTIPLY
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
