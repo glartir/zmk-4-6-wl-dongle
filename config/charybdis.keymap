@@ -40,7 +40,7 @@
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <0 3 4 5>;
+        layers = <0 1 3 4 5>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -62,12 +62,12 @@
     trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <1>;
         evt-type = <INPUT_EV_REL>;            
         x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
         y-invert;
-        bindings = <&ib_wheel_scaler 1 32>;
+        scale-multiplier = <1>;
+        scale-divisor = <32>;
     };
 
     ib_wheel_scaler: ib_wheel_scaler {
@@ -93,21 +93,6 @@
             bindings = 
                 <&mo>,
                 <&kp>;
-        };
-         scroll_toggle: scroll_toggle {
-            compatible = "zmk,behavior-toggle";
-            #binding-cells = <0>;
-            bindings = <&trackball_scroll_mode>;
-        };
-        trackball_scroll_mode: trackball_scroll_mode {
-            compatible = "zmk,input-behavior-listener";
-            device = <&vtrackball>;
-            evt-type = <INPUT_EV_REL>;
-            x-input-code = <INPUT_REL_HWHEEL>;
-            y-input-code = <INPUT_REL_WHEEL>;
-            y-invert;
-            scale-multiplier = <1>;
-            scale-divisor = <32>;
         };
     };
 
@@ -145,7 +130,7 @@
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &trans       &kp LEFT       &kp DOWN     &kp RIGHT      &trans         &trans           &kp EQUAL      &kp N4         &kp N5        &kp N6      &kp BACKSLASH    &kp KP_DIVIDE
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                      &trans    &trans        &trans         &trans      &scroll_toggle      &kp PLUS          &kp DOT      &kp N1         &kp N2        &kp N3       &trans        &kp ENTER
+                      &trans    &trans        &trans         &trans      &trackball_scroll_listener      &kp PLUS          &kp DOT      &kp N1         &kp N2        &kp N3       &trans        &kp ENTER
             // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                                               &trans       &trans        &trans            &kp N0        &trans
             //                                           ╰─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────╯
