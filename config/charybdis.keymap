@@ -66,10 +66,18 @@
         device = <&vtrackball>;
         layers = <4>;
         evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
         rotate-deg = <15>;
         bindings = <&ib_wheel_scaler 1 32>;
+    };
+
+    trackball_scroll_listener_horizontal {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackball>;
+        layers = <5>; 
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_HWHEEL>;
+        bindings = <&ib_wheel_scaler 1 32>; 
     };
 
     ib_wheel_scaler: ib_wheel_scaler {
@@ -177,7 +185,7 @@
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &trans      &bt BT_CLR    &mkp RCLK     &trans       &mkp LCLK        &to 3           &kp C_VOLUME_DOWN &kp LEFT     &kp DOWN      &kp RIGHT      &kp BSLH      &kp GRAVE
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &trans     &out OUT_TOG   &bootloader     &trans         &mo 4       &mo 4           &kp C_MUTE       &kp RBKT     &mkp MCLK      &kp RBRC      &kp PIPE      &kp TILDE
+                   &trans     &out OUT_TOG   &bootloader     &trans         &mo 4       &mo 5           &kp C_MUTE       &kp RBKT     &mkp MCLK      &kp RBRC      &kp PIPE      &kp TILDE
             // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                                               &trans        &trans       &trans            &trans        &trans    
             //                                           ╰─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────╯
