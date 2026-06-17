@@ -35,10 +35,6 @@
             bindings = <&sys_reset>;
             key-positions = <11 23>;
         };
-	combo_unlock {
-      		key-positions = <0 4>;
-      		bindings = <&studio_unlock>;
-    	};
     };
 
     trackball_listener {
@@ -129,13 +125,13 @@
                 &kp E
                 &kp N
                 &kp T
-                &kp N8
+                &kp N5
+                &kp N5
+                &kp N5
+                &kp N5
             >;
         };
     };
-	chosen {
-    	zmk,physical-layout = &charybdis_6col_layout;
-  	};
     keymap {
         compatible = "zmk,keymap";
 
