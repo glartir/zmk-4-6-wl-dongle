@@ -206,9 +206,9 @@
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &trans        &kp EXCL       &kp AT      &kp HASH       &kp DLLR     &kp PRCNT         &kp C_VOLUME_UP  &kp HOME    &kp UP        &kp END       &kp RPAR      &kp DEL
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &trans      &bt BT_CLR    &mkp RCLK     &trans       &mkp LCLK        &to 3           &kp C_VOLUME_DOWN &kp LEFT     &kp DOWN      &kp RIGHT      &kp BSLH      &kp GRAVE
+                   &trans      &bt BT_CLR    &mkp RCLK     &trans       &mkp LCLK        &to 3           &kp C_VOLUME_DOWN &kp LEFT     &kp DOWN      &kp RIGHT      &kp BACKSLASH      &kp GRAVE
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &trans     &out OUT_TOG   &bootloader     &trans         &mo 4       &mo 5           &kp C_MUTE       &kp RBKT     &mkp MCLK      &kp RBRC      &kp PIPE      &kp TILDE
+                   &trans     &trans    &trans     &trans         &mo 4       &mo 5           &kp C_MUTE       &kp RBKT     &mkp MCLK      &kp RBRC      &kp PIPE      &kp TILDE
             // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                                               &trans        &trans       &trans            &trans        &trans
             //                                           ╰─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────╯
