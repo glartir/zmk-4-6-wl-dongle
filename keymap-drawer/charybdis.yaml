@@ -115,12 +115,12 @@ layers:
   - {type: held}
   - '0'
   Symbol:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&sys_reset'
-  - BOOT LDR
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
