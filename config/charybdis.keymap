@@ -52,6 +52,30 @@
         <&kp>,
         <&kp>;
     };
+  hello_world: hello_world_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &kp LS(I)
+                &kp N
+                &kp T
+                &kp E
+                &kp R
+                &kp E
+                &kp S
+                &kp T
+                &kp LS(MINUS)
+                &kp P
+                &kp A
+                &kp Y
+                &kp M
+                &kp E
+                &kp N
+                &kp T
+                &kp N8
+            >;
+        };
+    };
 
     hmr: hmr {
       compatible = "zmk,behavior-hold-tap";
@@ -202,13 +226,13 @@
       display-name = "Symbol";
        bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &kp F6           &kp F7       &kp F8       &kp F9        &kp F10     &kp F11           &trans       &trans         &trans        &trans        &trans        &trans
+             &kp F6           &kp F7       &kp F8       &kp F9        &kp F10     &kp F11           &trans       &trans         &trans        &trans        &trans        &hello_world
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-             &trans         &trans       &kp UP         &trans       &trans         &trans           &kp N7       &kp N8         &kp N9        &kp N0        &kp HOME      &kp F1
+             &trans         &trans       &kp UP         &trans       &trans         &trans           &kp C_VOLUME_UP  &kp HOME    &kp UP        &kp END       &kp RPAR      &kp DEL
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-             &trans       &kp LEFT       &kp DOWN     &kp RIGHT      &trans         &trans           &kp N4       &kp N5         &kp N6        &none         &trans        &kp F10
+             &trans       &kp LEFT       &kp DOWN     &kp RIGHT      &trans         &trans           &kp C_VOLUME_DOWN &kp LEFT     &kp DOWN      &kp RIGHT      &kp BSLH      &kp GRAVE
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-           &kp LEFT_ALT    &trans        &trans         &trans      &kp MINUS      &kp PLUS          &kp N1       &kp N2         &kp N3        &kp DOT       &trans        &kp F20
+           &kp LEFT_ALT    &trans        &trans         &trans      &kp MINUS      &kp PLUS          &kp C_MUTE       &kp RBKT     &mkp MCLK      &kp RBRC      &kp PIPE      &kp TILDE
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                            &trans        &trans         &trans        &trans       &trans            &trans        &trans        &trans
       //                                           ╰─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────╯
