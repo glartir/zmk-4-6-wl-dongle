@@ -1,7 +1,62 @@
 layout: {zmk_keyboard: charybdis, layout_name: charybdis_6col_layout}
 layers:
-  Base: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', DEL, TAB, Q, W, E, R, T, Y, U, I, O, P, '[', ESC, A, S, D, F, G, H, J, K, L, ;, '''', LSHFT, Z, X,
-    C, V, B, N, M, ',', ., /, ']', Mouse, RET, LEFT GUI, LCTRL, SPACE, LEFT ALT, Symbol, BSPC]
+  Base:
+  - ESC
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - DEV TOOLS
+  - '='
+  - '['
+  - ']'
+  - '-'
+  - DEL
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '['
+  - LSHIFT
+  - A
+  - S
+  - {t: D, h: Symbol}
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - Symbol
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - ENTER
+  - L CLK
+  - LALT
+  - LEFT GUI
+  - LSHIFT
+  - BSPC
+  - LCTRL
+  - {t: SPACE, h: Mouse}
+  - {t: SPACE, h: Mouse}
   Mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -51,13 +106,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '&mkp MB1', type: held}
+  - '&mkp MB1'
   - '&mkp MB2'
   - '&mkp MB3'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   Symbol:
   - {t: ▽, type: trans}
@@ -87,7 +142,7 @@ layers:
   - {t: ▽, type: trans}
   - LEFT
   - DOWN
-  - RIGHT
+  - {t: RIGHT, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '4'
@@ -114,7 +169,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Number:
   - {t: ▽, type: trans}
@@ -165,13 +220,13 @@ layers:
   - '}'
   - '|'
   - '~'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Function:
   - {t: ▽, type: trans}
