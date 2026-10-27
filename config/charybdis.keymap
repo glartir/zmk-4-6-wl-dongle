@@ -101,6 +101,18 @@
       bindings = <&sk LSHIFT>, <&caps_word>;
       mods = <(MOD_LSFT)>;
     };
+
+    // Печатает "Capitalization_event5"
+    hello_world: hello_world_macro {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <
+        &kp LS(C) &kp A &kp P &kp I &kp T &kp A &kp L &kp I &kp Z &kp A &kp T &kp I &kp O &kp N
+        &kp UNDERSCORE
+        &kp E &kp V &kp E &kp N &kp T
+        &kp N5
+      >;
+    };
   };
 
   combos {
@@ -198,7 +210,7 @@
       display-name = "Symbol";
        bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &kp F6           &kp F7       &kp F8       &kp F9        &kp F10     &kp F11           &trans       &trans         &trans        &trans        &trans        &trans
+             &kp F6           &kp F7       &kp F8       &kp F9        &kp F10     &kp F11           &trans       &trans         &trans        &trans        &trans        &hello_world
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
              &trans         &trans       &kp UP         &trans       &trans         &trans           &kp C_VOLUME_UP  &kp HOME    &kp UP        &kp END       &kp RPAR      &kp DEL
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
