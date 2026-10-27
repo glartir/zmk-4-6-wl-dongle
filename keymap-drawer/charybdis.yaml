@@ -52,10 +52,10 @@ layers:
   - L CLK
   - LALT
   - LEFT GUI
-  - LSHIFT
-  - BSPC
   - LCTRL
   - {t: SPACE, h: Mouse}
+  - LSHIFT
+  - BSPC
   - {t: SPACE, h: Mouse}
   Mouse:
   - {t: ▽, type: trans}
@@ -109,10 +109,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - SPACE
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '0'
   Symbol:
   - F6
