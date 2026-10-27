@@ -6,7 +6,9 @@
 #define SYM 2
 #define NUM 3
 #define FN 4
-#define GENSHIN 5 
+#define GENSHIN 5
+#define SCROLL_V 7
+#define SCROLL_H 8
 
 // Поворот сенсора: так курсор движется правильно при установленном шаре.
 #define BALL_ROTATE (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
@@ -37,24 +39,24 @@
         // Слои-переопределения проверяются ПО ПОРЯДКУ, срабатывает первый подходящий.
         // Поэтому базовый слой 0 здесь указывать нельзя: он активен всегда и перекроет всё остальное.
 
-        // FUNCTION (&mo 4): только вертикальный скролл.
+        // SCROLL_V (&mo 7, на слое Symbol клавиша V): только вертикальный скролл.
         scroll_vertical {
-            layers = <FN>;
+            layers = <SCROLL_V>;
             input-processors = <
                 &zip_xy_transform SCROLL_ROTATE
                 &zip_x_scaler 0 1
-                &zip_y_scaler 1 14
+                &zip_y_scaler 1 12
                 &zip_xy_to_scroll_mapper
             >;
         };
 
-        // GAME (&mo 5): только горизонтальный скролл.
+        // SCROLL_H (&mo 8, на слое Symbol клавиша B): только горизонтальный скролл.
         scroll_horizontal {
-            layers = <GENSHIN>;
+            layers = <SCROLL_H>;
             input-processors = <
                 &zip_xy_transform SCROLL_ROTATE
                 &zip_y_scaler 0 1
-                &zip_x_scaler 1 14
+                &zip_x_scaler 1 12
                 &zip_xy_to_scroll_mapper
             >;
         };
