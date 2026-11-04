@@ -117,6 +117,16 @@
     };
   };
 
+  shift_space: shift_space_macro {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <
+        &kp LSHFT
+        &macro_wait_time 300
+        &kp SPACE
+    >;
+};
+
   combos {
     compatible = "zmk,combos";
     timeout-ms = <20>;
@@ -267,15 +277,15 @@
       display-name = "Game";
       bindings = <
       // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &trans        &trans         &kp N1         &kp N2         &kp N3      &kp N4              &trans         &trans         &trans        &trans        &trans        &trans
+             &trans        &shift_space    &kp N1         &kp N2         &kp N3      &kp N4              &trans         &trans         &trans        &trans        &trans        &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
              &trans        &kp T          &kp Q        &kp W          &kp E        &kp R            &trans         &trans         &trans        &trans        &trans        &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
              &trans        &kp G          &kp A        &kp S          &kp D        &kp F            &trans         &trans         &trans        &trans        &trans        &trans
       // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-             &kp LCTRL      &kp B          &kp Z        &kp X          &kp C        &kp V            &trans         &trans         &trans        &trans        &trans        &kp ENTER
+             &kp LCTRL      &kp Z          &kp X        &kp C          &kp V        &kp B            &trans         &trans         &trans        &trans        &trans        &kp ENTER
       // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                           &trans        &trans        &mo 0        &trans       &kp SPACE        &trans        &trans        &trans
+                           &kp V         &trans        &mo 0        &trans       &kp SPACE        &trans        &trans        &trans
       //                                           ╰─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────╯
       >;
     };
