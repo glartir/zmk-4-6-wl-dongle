@@ -287,8 +287,8 @@ layers:
   - {t: ▽, type: trans}
   Game:
   - {t: ▽, type: trans}
-  - '&shift_space'
   - '1'
+  - '2'
   - '2'
   - '3'
   - '4'
@@ -326,7 +326,7 @@ layers:
   - Z
   - X
   - C
-  - V
+  - {t: LSHIFT, h: sticky, s: CAPS WORD}
   - B
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
