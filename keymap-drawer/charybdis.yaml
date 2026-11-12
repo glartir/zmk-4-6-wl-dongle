@@ -287,8 +287,8 @@ layers:
   - {t: ▽, type: trans}
   Game:
   - {t: ▽, type: trans}
-  - '&shift_space'
   - '1'
+  - '2'
   - '2'
   - '3'
   - '4'
@@ -326,7 +326,7 @@ layers:
   - Z
   - X
   - C
-  - V
+  - LSHFT
   - B
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -336,8 +336,8 @@ layers:
   - ENTER
   - V
   - {t: ▽, type: trans}
-  - Base
-  - {t: ▽, type: trans}
+  - '&game_off'
+  - '&shift_space'
   - SPACE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
